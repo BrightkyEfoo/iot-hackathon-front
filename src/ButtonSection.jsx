@@ -35,13 +35,13 @@ class ButtonSection extends Component {
     let url = ''
     if(type === 1){
       this.setState({...this.state,color1 : 'lightgreen'})
-      url = `http://localhost:3001/api-hackathon/vidange`
+      url = `https://iot-hackathon-server.herokuapp.com/api-hackathon/vidange`
       jsonPost = {
         vidange : true
       }
     }else if(type === 2){
       this.setState({...this.state,color2 : 'lightgreen'})
-      url = `http://localhost:3001/api-hackathon/aliment`
+      url = `https://iot-hackathon-server.herokuapp.com/api-hackathon/aliment`
       jsonPost = {
         aliment : true
       }
