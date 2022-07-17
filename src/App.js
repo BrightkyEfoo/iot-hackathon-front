@@ -66,12 +66,12 @@ export default class App extends Component {
     clearInterval(this.timerID)
   }
   updateValue(){
-    axios.get('http://localhost:3001/api-hackathon/values', 
-    {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-      responseType: "json",}
+    axios.get('https://iot-hackathon-server.herokuapp.com/api-hackathon/values', 
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+        responseType: "json",}
       )
         .then(response => {
           console.log(response.data)
