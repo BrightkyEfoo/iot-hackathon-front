@@ -15,7 +15,7 @@ const Button = styled.button`
 export class StopButton extends Component {
   handleChange(e){
     e.preventDefault()
-    axios.post('http://localhost:3001/api-hackathon/stop',{
+    axios.post('https://iot-hackathon-server.herokuapp.com/api-hackathon/stop',{
       stop:true
     })
   }
