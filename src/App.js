@@ -13,6 +13,11 @@ const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 420px) {
+        font-size: 12px;
+        flex-direction:column ;
+        padding-top: 30px ;
+      }
   
 `
 
@@ -26,6 +31,18 @@ const Right = styled.div`
   justify-content: space-around;
   align-items: center ;
   flex-direction: column;
+  @media (max-width: 420px) {
+    width : 95%;
+    height : 50%;
+    background-color: #e8e8e8;
+    margin : 20px;
+    padding: 15px 0 ;
+    border-radius: 15px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    flex-direction: column;
+      }
 `
 const Left = styled.div`
   justify-content: center;
@@ -37,14 +54,28 @@ const Left = styled.div`
   margin : 8px;
   border-radius: 15px ;
   flex-direction: column;
+  @media (max-width: 420px) {
+    width : 95%;
+    height : 50%;
+    background-color: #e8e8e8;
+    margin : 20px;
+    padding : 15px 0;
+    border-radius: 15px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    flex-direction: column;
+  }
 `
 const Title = styled.h1`
   font-size : 70px;
   text-align: center ;
   margin-bottom :10px ;
+  @media (max-width: 420px) {
+    margin:10px 2px;
+    font-size : 40px;
+      }
 `
-
-
 export default class App extends Component {
   constructor(props){
     super(props)
@@ -95,9 +126,9 @@ export default class App extends Component {
         {/* temperature */}
         <SensorValues src = 'https://i.ibb.co/YkGnNbd/tempIcon.jpg' titre = 'Temperature' value = {this.state.temp} units = '°C' couleur = '#fff'/>
         {/* Nitrates */}
-        <SensorValues src = 'https://i.ibb.co/QCx3RCJ/kisspng-carbon-hydrogen-atom-molecule-chemistry-hydrogen-5ae011fc0a8555-2452251615246341080431.png' titre = 'Nitrates' value = {this.state.nitrates} units = 'g/mol/m3' couleur = 'yellowGreen'/>
+        <SensorValues src = 'https://i.ibb.co/QCx3RCJ/kisspng-carbon-hydrogen-atom-molecule-chemistry-hydrogen-5ae011fc0a8555-2452251615246341080431.png' titre = 'Nitrates' value = {this.state.nitrates} units = 'mg/L' couleur = 'yellowGreen'/>
         {/* Nitrites */}
-        <SensorValues src = 'https://i.ibb.co/QCx3RCJ/kisspng-carbon-hydrogen-atom-molecule-chemistry-hydrogen-5ae011fc0a8555-2452251615246341080431.png' titre = 'Nitrites' value = {this.state.nitrites} units = 'g/mol/m3' couleur = 'Green'/>
+        <SensorValues src = 'https://i.ibb.co/QCx3RCJ/kisspng-carbon-hydrogen-atom-molecule-chemistry-hydrogen-5ae011fc0a8555-2452251615246341080431.png' titre = 'Nitrites' value = {this.state.nitrites} units = 'mg/L' couleur = 'Green'/>
         {/* ph */}
         <SensorValues src = 'https://i.ibb.co/bHgwfhV/t-l-chargement.png' titre = 'pH' value = {this.state.pH} units = 'none' couleur = '#006aff'/>
         {/* niveau d'eau */}

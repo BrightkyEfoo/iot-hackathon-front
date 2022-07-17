@@ -4,6 +4,9 @@ import axios from 'axios'
 
 const Title = styled.div`
     font-size:35px ;
+    @media (max-width: 420px) {
+      font-size : 25px;
+    }
 `
 const Button = styled.button`
     font-size:40px ;
@@ -16,12 +19,19 @@ const Button = styled.button`
     cursor : pointer;
     transition : all ease 300ms;
     &:hover{
-        background-color:lightgreen ;
+      background-color:lightgreen ;
     }
+    @media (max-width: 420px) {
+      margin:10px 2px;
+      font-size : 30px;
+      border-radius : 10px;
+      padding : 10px 5px;
+    }
+    
 `
 const Container = styled.div`
     font-size:40px ;
-    margin: 25px;
+    margin: 15px;
 `
 class ButtonSection extends Component {
   constructor() {
